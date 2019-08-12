@@ -1,1 +1,7 @@
 # Evaluation-and-Feedback-System
+The Evaluation and Feedback System is an application to assess and obtain feedback 
+from the user. In this project we have two categories:Quiz and Feedback. The quiz in 
+evaluation system helps the user to take MCQ’s on various  topics  like technical and
+logical. The user can choose level of difficulty either easy ,moderate or difficult.
+
+There are two types of users:1.The one who participates in the events and gives feedbacks or takes quiz on topic of interest for evaluation.2 Admin here is faculty who has authority to add questions to quiz to respective topics and also can view the faculty details and the feedback result given by the users that is students and can analyze the result, the student can take the quiz any number of time to improve themselves, here the quiz is mainly to see where the student stand how much they have understood the concepts and to make them understand the concept better. As this is an online system it reduces the amount of work required to be done. By evaluation the test gives result instantly and reduces the amount of manual work as compared to earlier and also gives a platform for self assessment and feedback is also very important to teacher her convey better. Here the feedback result can only be viewed by the faculty but the faculty cannot see who has given the feedback but can only see how many students have given the feedback to each faculty, here the result will be the average of all the questions answered by the student.
