@@ -1,0 +1,69 @@
+<!doctype html>
+<?php
+$servername = "localhost";
+$username="root";
+$password="";
+$dbname="ds";
+
+ 
+try{
+$conn = mysqli_Connect($servername,$username, $password, $dbname);
+//echo("successfully");
+}
+catch(MySQLi_Sql_Exception $ex)
+{
+echo("error");
+}
+if(isset($_POST['submit'])){
+$ds=$_POST['ds'];
+$query=mysqli_prepare($conn, "INSERT INTO `qsn1` VALUES (`id1`,`qsn`,`ans`)");
+mysqli_stmt_bind_param($query,'s',$ds);
+$result=mysqli_stmt_execute($query);
+ 
+try{
+//$result = mysqli_stmt_execute($query);
+ 
+if($result){
+if(mysqli_affected_rows($conn)>0){
+echo "submitted successfully";
+}
+else{
+echo "error in submission";
+}
+}
+}catch(Exception $ex){
+echo ("error in connection");
+}
+} 
+?>
+<html>
+<head>
+<meta charset="utf-8">
+
+
+<title>Quiz</title>
+</head>
+ 
+<body>
+<form action="" method="post">
+<table align="center">
+<tr>
+<td>id: <input type="text" placeholder="Enter qid" name="id"></td> <br>
+</tr>
+<tr>
+<td></td>
+<td>Question: <input type="text" placeholder="Enter Question" name="Question" ></td><br>
+</tr>
+<tr>
+<td></td>
+<td>Answer: <input type="text" placeholder="Enter the correct answer" name="Answer" ></td><br>
+</tr>
+<tr>
+<td><input type="submit" name="submit" value="submit"></td>
+</tr>
+
+ 
+</table>
+</form>
+</body>
+</html>
